@@ -1,38 +1,260 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --nav-footer-bg-color: #4E4E4E;
+  --light-bg-color: #F1F1F1;
+  --dark-bg-color: #405D78;
+  --primary-text-color: #000000;
+  --secondary-text-color: #FFFFFF;
+  --heading-color: #152D41;
+  --dot-bg-color: #E07A64;
+  --bold-text: 700;
+  --light-text: 400;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: 'Roboto', sans-serif;
+  ;
+}
+
+.container {
+  width: 96rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.hero {
+  background-color: var(--nav-footer-bg-color);
+  min-height: 10vh;
+
+}
+
+.hero__navigation {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.hero__row {
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.hero__link a {
+  color: var(--light-bg-color);
+  text-decoration: none;
+  font-weight: var(--light-text);
+  font-size: 1.8rem;
+}
+
+.hero__link:last-child a {
+  cursor: not-allowed;
+}
+
+.hero__logo {
+  color: var(--secondary-text-color);
+  font-size: 1.8rem;
+  flex: 1 1 40rem;
+}
+
+.site-baner {
+  min-height: 90vh;
+  background-image: url("assets/dan-otis-OYFHT4X5isg-unsplash\ \(1\).jpg");
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-text-color);
+
+
+}
+
+.site__shadow {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.site__btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: .5rem 3.5rem;
+  border: .3rem solid var(--secondary-text-color);
+  color: var(--secondary-text-color);
+  font-weight: var(--bold-text);
+  margin: min(5vh, 3rem) 2rem;
+  transition: all 1s ease;
+}
+
+.site__btn:hover {
+  background: var(--secondary-text-color);
+  color: var(--primary-text-color);
+
+}
+
+.site__primaryTitle {
+  font-size: 3.6rem;
+  font-size: clamp(2rem, 50%, 4rem);
+  margin: min(5vh, 3rem) 2rem;
+}
+
+.site__description {
+  margin: min(5vh, 1rem) 2rem;
+}
+
+.site-workers {
+  background-color: var(--light-bg-color);
+
+}
+
+.site__workersPhoto {
+  display: block;
+  flex: 1 1 1;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: min(5vh, 3rem) 2rem;
+}
+.worker1{
+  background-image: url("assets/julian-wan-WNoLnJo7tS8-unsplash.jpg");
+}
+.worker2{
+  background-image: url("assets/david-dm-x7ws6vTXoOU-unsplash.jpg");
+}
+.site__workersPhoto--onRight {
+  margin: min(5vh, 3rem) 2rem;
+}
+
+.site__title {
+  padding: min(5vh, 3rem) 2rem;
+  font-size: 3.6rem;
+  font-size: clamp(2rem, 50%, 4rem);
+  ;
+}
+
+.site__title--light {
+  color: var(--secondary-text-color);
+}
+
+.site__workerCaption {
+  display: flex;
+  flex: 1 3 40rem;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: min(5vh, 1rem) 2rem;
+}
+
+.site__workerCaption p {
+  width: clamp(45ch, 50%, 75ch);
+}
+
+.site__workerCaption--onRight {
+  order: -2;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: right;
+}
+
+.site__workerName {
+  margin: min(5vh, 1rem) 0;
+}
+
+.workers {
+  display: flex;
+  justify-content: space-around;
+}
+
+.site-services {
+  padding: min(5vh, 1rem) 2rem;
+  background-color: var(--dark-bg-color);
+}
+
+.site__boxes {
+  display: flex;
+  min-height: 50vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  padding: min(5vh, 1rem) 2rem;
+  margin: auto;
+  width: calc(240px * 3 + 10px * 2);
 }
 
-.App-link {
-  color: #61dafb;
+.site__box {
+  display: flex;
+  text-align: center;
+  min-height: 15rem;
+  min-width: 15rem;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-text-color);
+  font-size: 2rem;
+  color: var(--primary-text-color);
+  margin: 2rem;
+  padding: 3rem 0;
+  transition: all 0.5s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.site__box:first-of-type {
+  flex-direction: column;
+}
+
+.site__box:first-of-type::before {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
+  background-color: var(--dot-bg-color);
+  top: -50px;
+  left: -75px;
+  border-radius: 50%;
+}
+
+.site__box:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  min-height: 10vh;
+  background-color: var(--nav-footer-bg-color);
+  padding: 1rem;
+  color: var(--secondary-text-color);
+}
+
+.footer__wrapper {
+  margin: min(5vh, 1rem) 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.8rem;
+}
+
+.footer__icons {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1 1 1rem;
+
+}
+
+
+.footer__icon {
+  fill: var(--secondary-text-color);
+  width: 3.1rem;
+  margin-left: 2rem;
 }
