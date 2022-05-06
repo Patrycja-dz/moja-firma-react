@@ -2,7 +2,7 @@
   "name": "moja-firma-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": " https://patrycja-dz.github.io/moja-firma-react/",
+  "homepage": "https://patrycja-dz.github.io/moja-firma-react/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
